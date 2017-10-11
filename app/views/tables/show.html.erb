@@ -1,0 +1,30 @@
+<%= link_to('add a task to the list', new_table_addition_path) %>
+
+<h1> tasks! </h1>
+<ol>
+  <% @todo.find_each do |todo| %>
+    <li>
+      <%= todo.task %>
+    </li>
+  <% end %>
+</ol>
+
+<h1> cats! </h1>
+<% @cat.find_each do |cat| %>
+  <p>
+    Name: <%= cat.name %>
+  </p>
+<% end %>
+
+<h1> users! </h1>
+<% @user.find_each do |user| %>
+  <p>
+    Username: <%= user.username %> </br>
+    Age: <%= user.age %> </br>
+    Email: <%= user.email %> </br>
+  </p>
+<% end %>
+
+
+
+<!-- fuck styling ur pages bare bones and ugly is the call -->
